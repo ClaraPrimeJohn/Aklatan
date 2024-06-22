@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Fill in the details</h2>
+        <form id="cardForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="membershipType">Membership Type:</label>
+                <input type="text" id="membershipType" name="membershipType" required>
+            </div>
+
+            <div class="form-group">
+                <label for="receiptNo">Receipt Number:</label>
+                <input type="text" id="receiptNo" name="receiptNo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="renewalDate">Renewal Date:</label>
+                <input type="date" id="renewalDate" name="renewalDate" required>
+            </div>
+
+            <button type="button" onclick="generateCard()">See Card Preview</button>
+        </form>
+    </div>
+
+    <div id="cardPreviewContainer" style="display:none;">
+        <div class="card">
+            <div class="header"><h3>YOUNG MEN'S CHRISTIAN ASSOCIATION</h3></div>
+            <div class="row2">
+                <div class="photo">
+                    <img src="./assets/YMCA ogol.png" alt="YMCA Logo">
+                </div>
+                <div class="second">
+                    <h3>OF MANILA</h3>
+                    <h3>BASIC MEMBERSHIP</h3>
+                </div>
+                <div class="photo2">Photo</div>
+            </div>
+
+            <div class="texts">
+                <p>&nbsp<span id="namePreview">____________________________</span><br><br>is a <span id="membershipTypePreview">_______________________</span> Member 
+                </p>
+            </div>
+            <div class="panels">
+                <div class="left-panel">
+                    <p class="card-no">CARD NO: <span id="cardNo">3921</span></p>
+                </div>
+                <div class="right-panel">
+                    <p>RECEIPT NO: &nbsp;<span id="cardReceiptNo">_______________________</span></p>
+                    <p>RENEWAL DATE: &nbsp;<span id="cardRenewalDate">_______________________</span></p>
+                    <p>_______________________________<br><i>Director General</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="downloadButton" style="display:none;" onclick="downloadCard()">Download Card</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
